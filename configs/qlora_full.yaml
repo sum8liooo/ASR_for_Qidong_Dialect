@@ -1,0 +1,16 @@
+# Condition: QLoRA, FULL Qidong corpus (all data, no subsampling)
+base_model: openai/whisper-large-v3
+dataset: data/processed/hf_dataset
+output_dir: runs/qlora_full
+qlora: true            # false = plain LoRA fp16 (needs ~24GB+ VRAM)
+# init_adapter: runs/wenetwu_warmup/best_adapter   # for warm-up condition
+lora_r: 8
+lora_alpha: 16
+target_modules: [q_proj, v_proj]
+lora_dropout: 0.05
+batch_size: 1
+grad_accum: 16
+lr: 1.0e-4
+max_steps: 2000
+eval_steps: 200
+grad_ckpt: true        # gradient checkpointing: ~30% slower, big VRAM saving (keep on for local GPUs)

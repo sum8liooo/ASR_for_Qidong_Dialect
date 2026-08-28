@@ -1,0 +1,14 @@
+{
+  "condition":"zero-shot",
+  "corpus_CER":0.8056,
+  "sentence_CER":0.7963,
+  "wordlist_CER":0.9476,
+  "mean_utt_CER":0.8706,
+  "per_speaker_CER":{
+    "spk01":0.9411,
+    "spk08":0.8
+  },
+  "n_utts":470,
+  "n_sentence":310,
+  "n_wordlist":160
+}

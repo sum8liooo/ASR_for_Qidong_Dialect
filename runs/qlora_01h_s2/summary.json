@@ -1,0 +1,14 @@
+{
+  "condition":"D:\\qidong-asr\\qidong-asr-pipeline\\runs\\qlora_01h_s2\\best_adapter",
+  "corpus_CER":0.7924,
+  "sentence_CER":0.7889,
+  "wordlist_CER":0.8472,
+  "mean_utt_CER":0.8339,
+  "per_speaker_CER":{
+    "spk01":0.8028,
+    "spk08":0.865
+  },
+  "n_utts":470,
+  "n_sentence":310,
+  "n_wordlist":160
+}

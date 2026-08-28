@@ -1,0 +1,31 @@
+# ==== Ethics-restricted data & corpus (NEVER commit) ====
+data/raw/
+data/processed/
+data/labelstudio/
+data/wu_bench/
+consent*
+questionnaire*
+
+# audio of any kind
+*.wav
+*.m4a
+*.mp3
+*.flac
+
+# ==== Model weights (distributed via gated repo, not git) ====
+runs/*/best_adapter/
+runs/*/checkpoint-*/
+
+# ==== Derived transcripts & verbose logs ====
+runs/**/per_utterance.csv
+data/labelstudio/export.json
+data/labelstudio/tasks.json
+*.log
+# ...except path-scrubbed training logs (kept as raw training record; no transcripts)
+!**/train.log
+
+# ==== Environments / caches / archives ====
+.venv/
+__pycache__/
+*.pyc
+*.zip

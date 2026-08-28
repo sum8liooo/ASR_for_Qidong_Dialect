@@ -1,0 +1,17 @@
+# Condition: QLoRA, 0.25h Qidong subsample (data-scaling ablation)
+base_model: openai/whisper-large-v3
+dataset: data/processed/hf_dataset
+output_dir: runs/qlora_025h
+qlora: true            # false = plain LoRA fp16 (needs ~24GB+ VRAM)
+train_hours: 0.25    # data-scaling: subsample train split to this many hours
+# init_adapter: runs/wenetwu_warmup/best_adapter   # for warm-up condition
+lora_r: 8
+lora_alpha: 16
+target_modules: [q_proj, v_proj]
+lora_dropout: 0.05
+batch_size: 1
+grad_accum: 16
+lr: 1.0e-4
+max_steps: 1000        # lowered for small data (avoid over-fitting)
+eval_steps: 150
+grad_ckpt: true        # gradient checkpointing: ~30% slower, big VRAM saving (keep on for local GPUs)

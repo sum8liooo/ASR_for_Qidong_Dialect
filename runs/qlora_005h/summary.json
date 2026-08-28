@@ -1,0 +1,14 @@
+{
+  "condition":"runs\/qlora_005h\/best_adapter",
+  "corpus_CER":0.7348,
+  "sentence_CER":0.7271,
+  "wordlist_CER":0.8515,
+  "mean_utt_CER":0.793,
+  "per_speaker_CER":{
+    "spk01":0.8614,
+    "spk08":0.7247
+  },
+  "n_utts":470,
+  "n_sentence":310,
+  "n_wordlist":160
+}
